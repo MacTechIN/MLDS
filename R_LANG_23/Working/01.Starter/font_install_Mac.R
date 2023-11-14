@@ -1,0 +1,5 @@
+install.packages("extrafont")
+library(extrafont)
+font_import()
+library(ggplot2)
+theme_set(theme_grey(base_family="AppleGothic"))

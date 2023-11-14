@@ -1,0 +1,51 @@
+ghk[OpenCV Visual Studio Build]
+
+
+(Github)
+source  : https://github.com/opencv/opencv
+contrib : https://github.com/opencv/opencv_contrib/tree/4.x
+
+(CMake)
+https://blog.naver.com/dorergiverny/223057902921
+
+1. Where is the source code : D:\OpenCV\opencv-4.x
+2. Where to build the binaries : D:\OpenCV\build
+
+3. configure 1번
+
+4. Options: 
+	BUILD_EXAMPLE
+	BUILD_SHARED_LIBS : on
+		static으로 빌드하고 싶으시면 체크 해제
+		가끔씩 배포 시 static으로 배포하고 싶을 때 있음
+
+	BUILD_opencv_world : on
+		여러 dll들을 opencv_world.dll 로 하나로 묶어줌
+
+	OPENCV_ENABLE_NONFREE : on
+		SURF 등(SIFT는 특허 만료로 무료됨) 유료 기능 설치 
+
+	OPENCV_EXTRA_MODULES_PATH : 위치
+		D:\OpenCV\opencv_contrib-4.x/modules 선택
+
+	
+
+
+5. configure 1번 더 
+
+6. Generate
+
+7. Open Project
+
+8. Build
+
+9. Install
+	- CMakeTargets/INSTALL -> 빌드
+	- 
+
+10. 환경변호 : 
+	- Path : D:\OpenCV\build\install\x64\vc17\binBc
+
+8. CMD
+	- opencv_version.exe
+	
